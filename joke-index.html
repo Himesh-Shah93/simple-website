@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <link rel="stylesheet" href="joke-styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>😂 Random Joke Generator</h1>
+            <p>Get a laugh with random jokes from around the world</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Joke Display Card -->
+            <div class="joke-card">
+                <div class="joke-content">
+                    <p id="jokeText" class="joke-text">Click the button to get a joke...</p>
+                    <p id="jokeType" class="joke-type"></p>
+                </div>
+                <div class="joke-actions">
+                    <button id="getJokeBtn" class="btn-primary">Get Joke</button>
+                    <button id="copyBtn" class="btn-secondary">Copy Joke</button>
+                </div>
+            </div>
+
+            <!-- Joke Category Filter -->
+            <div class="filter-section">
+                <h3>Filter by Category:</h3>
+                <div class="category-buttons">
+                    <button class="category-btn active" data-category="any">Any</button>
+                    <button class="category-btn" data-category="general">General</button>
+                    <button class="category-btn" data-category="programming">Programming</button>
+                    <button class="category-btn" data-category="knock-knock">Knock-Knock</button>
+                </div>
+            </div>
+
+            <!-- Favorites Section -->
+            <div class="favorites-section">
+                <div class="favorites-header">
+                    <h3>❤️ My Favorite Jokes</h3>
+                    <button id="clearFavoritesBtn" class="btn-clear">Clear All</button>
+                </div>
+                <div id="favoritesList" class="favorites-list">
+                    <p class="empty-message">No favorites yet. Click the heart icon on jokes to save them!</p>
+                </div>
+            </div>
+
+            <!-- Loading Spinner -->
+            <div id="loadingSpinner" class="loading-spinner hidden"></div>
+
+            <!-- Error Message -->
+            <div id="errorMessage" class="error-message"></div>
+        </main>
+
+        <!-- Statistics -->
+        <section class="stats-section">
+            <div class="stat-card">
+                <span class="stat-number" id="jokesCount">0</span>
+                <span class="stat-label">Jokes Generated</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="favoritesCount">0</span>
+                <span class="stat-label">Favorites Saved</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="laughCounter">0</span>
+                <span class="stat-label">Times Laughed 😂</span>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Jokes powered by <a href="https://jokeapi.dev/" target="_blank">JokeAPI</a></p>
+            <p>&copy; 2024 Random Joke Generator. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="joke-script.js"></script>
+</body>
+</html>
